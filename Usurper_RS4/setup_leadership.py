@@ -12,8 +12,9 @@ def whatLeadershipValues():
         print("{} is {}".format(entry,playerLeadership[entry]))
 
 # verifying the values when the script starts
-whatLeadershipValues()
-print("")
+# whatLeadershipValues()
+# print("")
+
 # This currently accepts anything that is stringable, no matter how dumb - fix later.
 # "lnarg" 'l'eaders 'n' name 'r'ace 'arg'ument
 # pyip is the shorthand as impored for pyinputplus
@@ -22,13 +23,7 @@ lrarg = pyip.inputMenu(['Dwarf', 'Elf', 'Gnome', 'Goblin', 'Human', 'Reptilian',
 playerLeadership.update({'Leader_Name': lnarg})
 playerLeadership.update({'Leader_Race': lrarg})
 
-whatLeadershipValues()
-print("")
-
 cnarg = pyip.inputStr(prompt="What is your Cohort's Name? ")
 lrarg = pyip.inputMenu(['Dwarf', 'Elf', 'Gnome', 'Goblin', 'Human', 'Reptilian', 'Orc'])
 playerLeadership.update({'Cohort_Name': cnarg})
 playerLeadership.update({'Cohort_Race': lrarg})
-
-whatLeadershipValues()
-print("")
