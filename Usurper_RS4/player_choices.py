@@ -11,6 +11,6 @@ playerLeadership = {
     'Cohort_Race': ''
     }
 
-playerUnits = {}
+playerUnits = []
 
-playerExtras = {}
+playerExtras = []

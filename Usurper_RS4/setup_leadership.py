@@ -15,6 +15,8 @@ def whatLeadershipValues():
 whatLeadershipValues()
 print("")
 # This currently accepts anything that is stringable, no matter how dumb - fix later.
+# "lnarg" 'l'eaders 'n' name 'r'ace 'arg'ument
+# pyip is the shorthand as impored for pyinputplus
 lnarg = pyip.inputStr(prompt="What is your Leader's Name? ")
 lrarg = pyip.inputMenu(['Dwarf', 'Elf', 'Gnome', 'Goblin', 'Human', 'Reptilian', 'Orc'])
 playerLeadership.update({'Leader_Name': lnarg})
