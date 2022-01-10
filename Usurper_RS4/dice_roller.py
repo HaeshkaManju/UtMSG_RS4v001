@@ -136,8 +136,6 @@ def roll_harvest_dice(diceSize, dicePool, poolModifiers, rerollOnes):
  Rerolling 1s? {}""".format(diceSize, dicePool, poolModifiers, rerollOnes))
     diceValues = []
     TotalDice = 0
-    # Yes, I realize I can use diceSize for the Upperlimit as a reference, but I feel like this is easier to read.
-    # UpperLimit refers to the "maximum" value that can be rolled on a given die, thus it will be used when determining if an explosion occurs.
     if rerollOnes == True:
         for p in range(dicePool+1):
             diceRoll = random.randrange(2, diceSize+1)
