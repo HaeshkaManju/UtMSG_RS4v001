@@ -88,6 +88,7 @@ print("Total Dice Roll: ", result)
 diceSize = 6
 dicePool = 3
 poolModifiers = 7
+# Change this to "True" if a high-enough success was rolled to allow the rerolling of 1s.
 rerollOnes = False
 
 def roll_combat_dice(diceSize, dicePool, poolModifiers):
