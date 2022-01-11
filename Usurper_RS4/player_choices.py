@@ -1,3 +1,4 @@
+from standard_race_options import *
 """
 A pseudo-database for all of a player's choices.
 
@@ -20,6 +21,30 @@ playerLeadership = {
 ## 3) That Unit's Race.
 playerUnits = {
     # write a sample of what I *WANT* to see, then make code to make it do that thing.
+    1: "Rough Riders", "Stats": 
+    {
+        "Race": Goblins,
+        "Level": 0,
+        "Offense": 1,
+        "Defense": 1,
+        "Strength": 1,
+        "Speed - Combat": "M",
+        "Speed - Overland": 3,
+        "Max Tools": 3,
+        "Max Weapons": 1,
+        "Recruit Cost": 10,
+        "Upkeep Cost": 5,
+        "Racial Abilities": [],
+        "Skills": {},
+        "Special Abilities": [],
+        "Unique Abilities": [],
+        "Tools Equipped": {},
+        "Weapons Equipped": {},
+        "Armor Equipped": {},
+        "Mounts Equipped": {}
     }
+}
 
 playerExtras = []
+print(playerUnits)
+print(playerUnits[1]["Stats"]["Race"])

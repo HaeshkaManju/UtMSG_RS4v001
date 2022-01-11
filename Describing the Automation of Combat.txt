@@ -1,0 +1,62 @@
+Purpose of this Document:
+
+Describe, in lay terms, what will be needed to automate combat in the game: Usurper.
+
+Problem:
+
+Right now, combat takes a lot of time to handle as games progress, moreso than any other aspect of the game.  With combat being so prevalent, this makes running a game very difficult over months of real life time.  This also makes play-testing new components of the game even more difficult, as combat will inevitably occur in even the smallest of test runs.
+
+Basic Description of what a BASIC version of an Automated App/Script should do ("Minimum Viable Product"):
+
+Bottom Line Up Front (BLUF): Allow the user to enter the units of each side of a combat, press a "Fight" button, and then perform all of the steps of a combat, displaying the results in a text output.
+
+Long Explanation:
+1) Accept Entries of Entities according to the basic game rules into the script.
+2) Allow Entry of "Buffs" (bonuses/penalties) to individual units, and whole teams.
+3) Assign Two teams to the script (labeled as "Aggressor" vs "Aggressor" or "Aggressor" vs "Defender")
+4) Roll dice of the appropriate types.
+5) Follow the combat sequence.
+6) Display each step of the combat sequence to the user and describe the outcomes/results of the dice rolls.
+7) Follow the "targeting" priority rules of combat.
+
+Desired Functionalities:
+
+1) Page/Tool to Enter Entities into the app/script.
+
+A user should be able to Pick "Side 1" or "Side 2" and one or more entities to each side.
+The user should be able to setup the information for that entity, including: stats, skills, spells, items (with their qualities), abilities, targeting rules.
+
+2) Drop-down/selection tool to describe either side as being Aggressor or Defender.
+
+Script/App will need to recognize these terms for purposes of following the strategy phase rules (a few skills apply depending if you're the aggressor/defender.)
+Script/App will need to validate that BOTH sides have NOT been set to Defender, allowing only one side at a time to be a Defender.
+
+3) Set "Team"-wide bonuses/penalties.
+
+To keep this "basic", instead of individually listing every possible bonus that could get added and having a giant wall of checkboxes or some other nonsense, the user simply needs the ability to enter bonuses and penalties for ranged and melee combat.
+Something along the lines of:
+"Ranged Offense: +1d6"
+"Ranged Defense: +1"
+"Melee Armor: -[1d6-1]" (a negative value)
+"Morale: +2"
+These bonuses/penalties will then be added to EVERY relevant roll for that side.
+
+4) A button which begins the calculator script to run the fight between the two sides.
+
+The script should then follow all of the combat phases, printing out the results of each step into a text file, stating the following:
+a) The Phase
+b) The Side/Entity to/for whom the roll applies.
+c) The dice roll + the total
+d) The results of that/those rolls.
+
+Example:
+
+Team 1, Squad A Attacks Team 2, Squad B in Melee, Round1.
+Squad A rolled 12 on Offense for a total of 22.
+Squad B rolled 9 on Defense for a total of 9.
+Result: This is a hit.
+Squad A rolled 11 on Damage for a total of 17.
+Squad B rolled 16 on Armor for a total of 20.
+Result: No damage dealt.
+
+

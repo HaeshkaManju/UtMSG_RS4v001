@@ -102,12 +102,19 @@ def roll_combat_dice(diceSize, dicePool, poolModifiers):
  Dice Size: {}
  Dice Pool: {}
  Total Modifiers: {}""".format(diceSize, dicePool, poolModifiers))
+    # We begin with the diceValues array being empty.  This is where we will store all of our dice rolls.
+    # I don't know if this is even necessary.  Feels like we could just add the values to the total as we go.
     diceValues = []
-    TotalDice = 0
+    # TotalOfDice will be used to tabulate the total of all of our dice as we go.
+    TotalOfDice = 0
     # Yes, I realize I can use diceSize for the Upperlimit as a reference, but I feel like this is easier to read.
     # UpperLimit refers to the "maximum" value that can be rolled on a given die, thus it will be used when determining if an explosion occurs.
     UpperLimit = diceSize
+    # These ranges are +1, because they take the pool and size, use them in ranges, but ranges always stop AT the number value
+    ## but, we want the full number value, so we add 1.
     for p in range(dicePool+1):
+        # diceSize is used to replicate a "D4, D6, D8, and D10" entering the appropriate value in that variable will result in the range being
+        ## equal to the possible dice roll.
         diceRoll = random.randrange(1, diceSize+1)
         print(diceRoll)
         diceValues.append(diceRoll)
@@ -116,9 +123,9 @@ def roll_combat_dice(diceSize, dicePool, poolModifiers):
         diceRoll2 = random.randrange(1, diceSize+1)
         diceValues.append(diceRoll2)
     for v in diceValues:
-        TotalDice += v
-    print("The Total of your Dice Pool Roll is: ", TotalDice)
-    print("The Grand Total of your Dice Roll is: ", TotalDice+poolModifiers)
+        TotalOfDice += v
+    print("The Total of your Dice Pool Roll is: ", TotalOfDice)
+    print("The Grand Total of your Dice Roll is: ", TotalOfDice+poolModifiers)
 
 
 def roll_harvest_dice(diceSize, dicePool, poolModifiers, rerollOnes):
@@ -134,8 +141,12 @@ def roll_harvest_dice(diceSize, dicePool, poolModifiers, rerollOnes):
  Dice Pool: {}
  Total Modifiers: {}
  Rerolling 1s? {}""".format(diceSize, dicePool, poolModifiers, rerollOnes))
+    # We begin with the diceValues array being empty.  This is where we will store all of our dice rolls.
+    # I don't know if this is even necessary.  Feels like we could just add the values to the total as we go.
     diceValues = []
-    TotalDice = 0
+    # TotalOfDice will be used to tabulate the total of all of our dice as we go.
+    TotalOfDice = 0
+    # We run this process if the results are such that we need to reroll ones, otherwise- set rerollOnes to False so this step is ignored.
     if rerollOnes == True:
         for p in range(dicePool+1):
             diceRoll = random.randrange(2, diceSize+1)
@@ -143,9 +154,9 @@ def roll_harvest_dice(diceSize, dicePool, poolModifiers, rerollOnes):
             diceValues.append(diceRoll)
             print(diceValues)
         for v in diceValues:
-            TotalDice += v
-        print("The Total of your Dice Pool Roll is: ", TotalDice)
-        print("The Grand Total of your Dice Roll is: ", TotalDice+poolModifiers)
+            TotalOfDice += v
+        print("The Total of your Dice Pool Roll is: ", TotalOfDice)
+        print("The Grand Total of your Dice Roll is: ", TotalOfDice+poolModifiers)
     else:
         for p in range(dicePool+1):
             diceRoll = random.randrange(1, diceSize+1)
@@ -153,9 +164,9 @@ def roll_harvest_dice(diceSize, dicePool, poolModifiers, rerollOnes):
             diceValues.append(diceRoll)
             print(diceValues)
         for v in diceValues:
-            TotalDice += v
-        print("The Total of your Dice Pool Roll is: ", TotalDice)
-        print("The Grand Total of your Dice Roll is: ", TotalDice+poolModifiers)
+            TotalOfDice += v
+        print("The Total of your Dice Pool Roll is: ", TotalOfDice)
+        print("The Grand Total of your Dice Roll is: ", TotalOfDice+poolModifiers)
 ################################################################################
 #                          Dice Pool Rolls CALLS                               #
 ################################################################################

@@ -195,6 +195,9 @@ def display_standard_race_options(Standard_Races):
     '''
         This function is designed to show what the standard race options are.
         This should loop over the Standard_Races array, and display the SINGULAR version of the Race's collective name.
+        This function is currently being a bit redundant in calling the "Standard_Races" list.
+        This could easily be reworked to allow the display of any of the race lists by changing the
+        # argument block and the print block to match the argument instead of being hardcoded.
     '''
     for r in Standard_Races:
         print(r['singular'])
