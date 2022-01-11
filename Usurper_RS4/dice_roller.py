@@ -17,6 +17,12 @@ The functions shall be:
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
 ################################################################################
 
+############################################
+#            Test parameters only          #
+modifiers = 23
+# Please comment me out during production. #
+############################################
+
 def roll_std_d100(totalModifier):
     '''
         Standard d100 rolls are for "flat" rolls (simple percentile checks), such as determining if a Unique Event occurs for a given month.
@@ -69,8 +75,6 @@ def roll_exploding_d100(totalModifier):
 ################################################################################
 #                           D100 Dice Rolls CALLS                              #
 ################################################################################
-# Test parameters only
-modifiers = 23
 
 resultFlat = roll_std_d100(modifiers)
 print("Total Flat Dice Roll: ", resultFlat)
@@ -82,14 +86,20 @@ print("Total Dice Roll: ", result)
 #                              Dice Pool Rolls                                 #
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
 ################################################################################
-# test parameters only
 # Dice size should ALWAYS be 4, 6, 8, or 10.
+## NOT CURRENTLY intending to enforce this HERE
 # Dice size ALWAYS correlates to a random range of "1->Size" INCLUSIVE.
+############################################
+#            Test parameters only          #
 diceSize = 6
 dicePool = 3
 poolModifiers = 7
 # Change this to "True" if a high-enough success was rolled to allow the rerolling of 1s.
 rerollOnes = False
+# Please comment me out during production. #
+############################################
+
+
 
 def roll_combat_dice(diceSize, dicePool, poolModifiers):
     '''
@@ -148,6 +158,9 @@ def roll_harvest_dice(diceSize, dicePool, poolModifiers, rerollOnes):
     # TotalOfDice will be used to tabulate the total of all of our dice as we go.
     TotalOfDice = 0
     # We run this process if the results are such that we need to reroll ones, otherwise- set rerollOnes to False so this step is ignored.
+    # the First half of the IF follows when you WANT to ReRoll "1s".
+    ## Code-wise, we just make the initial range "2" instead of 1 so that a 1
+    ### can never be the result.
     if rerollOnes == True:
         for p in range(dicePool+1):
             diceRoll = random.randrange(2, diceSize+1)
@@ -158,6 +171,8 @@ def roll_harvest_dice(diceSize, dicePool, poolModifiers, rerollOnes):
             TotalOfDice += v
         print("The Total of your Dice Pool Roll is: ", TotalOfDice)
         print("The Grand Total of your Dice Roll is: ", TotalOfDice+poolModifiers)
+    # The Second half of the statement follows when you DON'T want # to
+    ## reroll ones.  This portion will follow the "normal" dice roll logic.
     else:
         for p in range(dicePool+1):
             diceRoll = random.randrange(1, diceSize+1)
