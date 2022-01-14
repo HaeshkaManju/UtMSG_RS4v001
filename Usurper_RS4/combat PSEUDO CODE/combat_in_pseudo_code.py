@@ -337,3 +337,37 @@ from dice_roller import roll_std_d100, roll_exploding_d100, roll_combat_dice
 # 101+   |  Resolute!    | No penalties.  The Unit is resolute!
 
 # When Morale checks are made, all penalties are cumulative.  If a Squad makes three morale checks: Battered, Shaken, and Resolute; this Squad will have a total of -20 to all future Morale checks, and -3 to Off, Def, and Str pools for the remainder of combat.
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+#       Weapons and Armor          #
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+# Weapons and Bonuses Provided
+#-------------------------------------#
+#   Item Name    | Off	| Def  | Dam  #
+#-------------------------------------#
+# Melee Weapons	 | +1d6	| -	   | +1d6
+# Ranged Weapons | +1d6	| -	   | -
+# Shields        |  -	| +1d6 | -
+
+# Armor and Bonuses Provided
+#-------------------------------------#
+# Item Name	   | Def	| Dam Red     #
+#-------------------------------------#
+# Light Armor  | +1	    | +2
+# Medium Armor | +1d6	| +1d6
+# Heavy Armor  | +1d6+2	| +1d6+2
+
+# Other Equipment, Mounts, and Associated Bonuses:
+# Guidon: +4 to Morale of Equipped Unit
+# If a Unit has a Guidon Equipped: +2 to all Unit's Morale.
+# Horses: +1d6 Offense, Combat speed is set to Fast or Unit Speed (whichever is higher.)
+
+# Relevant Spells
+#  Spell Name  |
+#	Might      | 1 x Unit in Combat "Counts as" 1 Higher Strength
+#	Fervor     | 1 x Unit in Combat "Counts as" 1 Higher Offense
+#	Stalwart   | 1 x Unit in Combat "Counts as" 1 Higher Defense
+#	Ward       | 1 x Unit in Combat "Counts as" 1 Improved Category of Armor
+#                (max "Heavy Armor")
+#	Celerity   | 1 x Unit in Combat "Counts as" 1 Higher Combat Speed
+#                (max: "C")
