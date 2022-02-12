@@ -1,0 +1,13 @@
+Skill				Notes									Prereqs				Max Ranks
+Courage: ♦			+3: Morale Rolls						-					10
+Leadership: ♥		+1: Combat								-					10
+Outmaneuver: ♦		Strategy Roll for +1 Ranged Round.		-					5
+Aggressor: ♦		+2: Offense & Damage					-					10
+Pernicious: ♦		Force Cumulative Morale Penalty			Aggressor[5]		5
+Parry: ♦			+2: Defense & Armor						-					10
+Tactics: ♥			Strategy Roll for Temp Offense Bonus.	-					10
+
+
+Leader and Hero Skill:
+Leader_and_Hero_Skills = [Leadership, Tactics]
+Squad Skills = [Courage, Outmaneuver, Aggressor, Pernicious, Parry]
