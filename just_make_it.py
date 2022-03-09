@@ -1,10 +1,15 @@
 # Just do it
 import pyinputplus as pyip
+
+###############################################################################
+# Pre-Initialized Values
+###############################################################################
 leader_ability_bonus = ["Banner Bearer", "Craftsman", "Herald",
                "Scholar", "Pioneer", "Scavenger"]
 
 spells = ("Might", "Fervor", "Stalwart" , "Ward", "Celerity", "Forced March",
          "Armament", "True-Cause", "Napoleon", "Mind Leech", "Force Cage", "Earth Golem")
+<<<<<<< Updated upstream
 
 leader_combat_skills = ["leadership", "tactics"]
 
@@ -14,6 +19,17 @@ squad_combat_skills = ["courage", "outmaneuver", "aggressor", "pernicious", "par
 # Functions
 ###############################################################################
 
+=======
+
+leader_combat_skills = ["leadership", "tactics"]
+
+squad_combat_skills = ["courage", "outmaneuver", "aggressor", "pernicious", "parry"]
+
+###############################################################################
+# Functions
+###############################################################################
+
+>>>>>>> Stashed changes
 #######################################
 # Chief Spells #
 #######################################
