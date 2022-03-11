@@ -33,7 +33,7 @@ class Grid(Places):
         self.terrain_type = terrain_type
         self.terrain_name = terrain_name
 
-    # Map Methods
+    # Grid Methods
     def gridsmethods(self):
         pass
 
@@ -48,37 +48,37 @@ class Site(Grid, Places):
         pass
 
 class Encounter(Grid, Places):
-    # Site Attributes
+    # Encounter Attributes
     def __init__(self, encounter_type, terrain_type, terrain_name, traits):
         super().__init__(terrain_type, terrain_name, traits)
         self.encounter_type = encounter_type
 
-    # Site Methods
+    # Encounter Methods
     def encountermethods(self):
         pass
 
 class Nodes(Grid, Places):
-    # Site Attributes
+    # Node Attributes
     def __init__(self, node_type, terrain_type, terrain_name, traits):
         super().__init__(terrain_type, terrain_name, traits)
         self.node_type = node_type
 
-    # Site Methods
+    # Node Methods
     def nodemethods(self):
         pass
 
-class Quest_Markers(Grid, Places):
-    # Site Attributes
+class QuestMarkers(Grid, Places):
+    # Quest/QuestMarker Attributes
     def __init__(self, quest_type, terrain_type, terrain_name, traits):
         super().__init__(terrain_type, terrain_name, traits)
         self.quest_type = quest_type
 
-    # Site Methods
+    # Quest/QuestMarker Methods
     def questmarkermethods(self):
         pass
 
 class Lairs(Grid, Places):
-    # Site Attributes
+    # Lair Attributes
     def __init__(self, lair_team, lair_id, obscurity_rating, obscurity_max, terrain_type, terrain_name, traits):
         super().__init__(terrain_type, terrain_name, traits)
         # Not sure if this one is strictly necessary.
@@ -90,16 +90,16 @@ class Lairs(Grid, Places):
         # Default starts at 250.  Adjusts based on game difficulty.
         self.obscurity_max = obscurity_max
 
-    # Site Methods
+    # Lair Methods
     def lairmethods(self):
         pass
 
 class Rooms(Lairs, Grid, Places):
-    # Site Attributes
+    # Room Attributes
     def __init__(self, room_type, lair_team, lair_id, terrain_type, terrain_name, traits):
         super().__init__(lair_team, lair_id, terrain_type, terrain_name, traits)
         self.room_type = room_type
 
-    # Site Methods
+    # Room Methods
     def lairmethods(self):
         pass
