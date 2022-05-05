@@ -17,9 +17,11 @@ class Map(Places):
     # There is only ever one map per instance of a game, hence the use
     # of a singular in the class name.
     # Not even sure this will need to be a class.
-    def __init__(self, size, traits):
+    def __init__(self, size, grid_squares, traits):
         super().__init__(traits)
         self.size = size
+        self.grid_squares = grid_squares
+
 
     # Map Methods
     def mapmethods(self):
@@ -28,10 +30,12 @@ class Map(Places):
 class Grid(Places):
     # Grid(s) Attributes
     # While a map has many grids within it, they are not a subclass.
-    def __init__(self, terrain_type, terrain_name, traits):
+    def __init__(self, terrain_type, terrain_name, num_loc, alpha_loc, traits):
         super().__init__(traits)
         self.terrain_type = terrain_type
         self.terrain_name = terrain_name
+        self.num_loc = num_loc
+        self.alpha_loc = alpha_loc
 
     # Grid Methods
     def gridsmethods(self):
@@ -52,6 +56,7 @@ class Encounter(Grid, Places):
     def __init__(self, encounter_type, terrain_type, terrain_name, traits):
         super().__init__(terrain_type, terrain_name, traits)
         self.encounter_type = encounter_type
+        self.encounter
 
     # Encounter Methods
     def encountermethods(self):

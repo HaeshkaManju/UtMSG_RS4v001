@@ -11,6 +11,124 @@ import pyinputplus as pyip
 # Does the equipping Squad put an item onto itself?
 # Do warehouses store items ??!?!?
 
+# Items (take up space, have a name, and a type)
+# Items -> Craftables -> Tools, Weapons, Armor (bought, sold, made, AND has various activity bonuses)
+# Items -> Artifacts (not bought/sold)
+# Items -> Mounts (not crafted, but still bought/sold, has activity bonuses)
+# Items -> Resources (different storage ratios than craftables.)
+
+###############################################################################
+# Items (take up space, have a name, and a type)
+###############################################################################
+class Items:
+    # Items Static attributes
+
+    # Items attributes
+    def __init__(self):
+        self.? = ?
+
+    # Items Methods
+    def ?(self):
+        pass
+
+###############################################################################
+# Items -> Craftables
+# (bought, sold, and made)
+###############################################################################
+class Craftables(Items):
+    # Craftables Static attributes
+
+    # Craftables attributes
+    def __init__(self):
+        super().__init__():
+        self.? = ?
+
+    # Craftables Methods
+    def ?(self):
+        pass
+
+###############################################################################
+# Items -> Craftables -> Tools
+# (bought, sold, made, AND has various activity bonuses)
+###############################################################################
+class Tools(Items, Craftables):
+    # Tools Static attributes
+
+    # Tools attributes
+    def __init__(self):
+        super().__init__():
+        self.? = ?
+
+    # Tools Methods
+    def ?(self):
+        pass
+
+###############################################################################
+# Items -> Craftables -> Weapons
+# (bought, sold, made, AND has various activity bonuses)
+###############################################################################
+class Weapons(Items, Craftables):
+    # Weapons Static attributes
+
+    # Weapons attributes
+    def __init__(self):
+        super().__init__():
+        self.? = ?
+
+    # Weapons Methods
+    def ?(self):
+        pass
+
+###############################################################################
+# Items -> Craftables -> Armor
+# (bought, sold, made, AND has various activity bonuses)
+###############################################################################
+class Armor(Items, Craftables):
+    # Armor Static attributes
+
+    # Armor attributes
+    def __init__(self):
+        super().__init__():
+        self.? = ?
+
+    # Armor Methods
+    def ?(self):
+        pass
+
+###############################################################################
+# Items -> Artifacts
+# (not bought/sold)
+# only go into leader carry slots or into reliquary slots.
+###############################################################################
+class Artifacts(Items):
+    # Artifacts Static attributes
+
+    # Artifacts attributes
+    def __init__(self):
+        super().__init__():
+        self.? = ?
+
+    # Artifacts Methods
+    def ?(self):
+        pass
+
+###############################################################################
+# Items -> Resources (different storage ratios than craftables.)
+###############################################################################
+class Resources(Items):
+    # Artifacts Static attributes
+
+    # Artifacts attributes
+    def __init__(self):
+        super().__init__():
+        self.? = ?
+
+    # Artifacts Methods
+    def ?(self):
+        pass
+
+
+
 class Items:
     # Items attributes
     def __init__(self, name, item_type, purchasable, sellable):
@@ -36,6 +154,10 @@ class Items:
 
         '''
         pass
+
+class Craftables(Items):
+    # Craftables attributes
+    def __init__(self, storage_ratio, craft_ingredients, quality_level, quality_bonus)
 
 class Tools(Items):
     # Tool Attributes
@@ -106,10 +228,12 @@ class Resources(Items):
         # There are four standard resources and five high quality resources.
         # Lumber, Stone, Iron, and Foodstuffs
         # Erebove, Libcite, Mithril, Cured Rations, and Gems
+        # This is a bool
         self.high_quality = high_quality
         # Should be expressed as a dictionary.
         # '1 Storage Slot':"X of Resource"
         self.storage_ratio = storage_ratio
+
 
     # Resources Methods
     def stuff6(self):
