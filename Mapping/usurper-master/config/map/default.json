@@ -1,0 +1,64 @@
+{
+	"width": 10,
+	"height": 10,
+	"terrain_default": "plains",
+	"tile_size": 50,
+	"tile_offset_x": 50,
+	"tile_offset_y": 55,
+	"terrains": {
+		"plains": {
+			"count": "25%",
+			"ascii": "#",
+			"color": "#FF0",
+			"image": "Plains.png",
+			"clumping": 1,
+			"clump_distance": 1,
+			"clumping_probability": 70,
+			"placement_sequence": 0
+		},
+		"rivers": {
+			"count": "15%",
+			"ascii": "~",
+			"color": "#68F",
+			"image": "Rivers.png",
+			"clumping": 1,
+			"clump_distance": 2,
+			"clumping_probability": 50,
+			"placement_sequence": 1
+		},
+		"swamps": {
+			"count": "10%",
+			"ascii": "=",
+			"color": "#00A",
+			"image": "Swamps.png",
+			"placement_sequence": 2
+		},
+		"forests": {
+			"count": "20%",
+			"ascii": "*",
+			"color": "#8F8",
+			"image": "Forests.png",
+			"placement_sequence": 3
+		},
+		"mountains": {
+			"count": "15%",
+			"ascii": "^",
+			"color": "#CCC",
+			"image": "Mountains.png",
+			"placement_sequence": 4
+		},
+		"hills": {
+			"count": "15%",
+			"ascii": "o",
+			"color": "#880",
+			"image": "Hills.png",
+			"placement_sequence": 5
+		}
+
+	},
+	"grid": {
+		"color": "#48F",
+		"size": "1px",
+		"visible": 1
+	}
+}
