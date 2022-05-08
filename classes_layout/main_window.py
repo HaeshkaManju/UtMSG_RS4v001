@@ -1,6 +1,5 @@
 from tkinter import *
 # This is an import developed SEPARATELY from tkinter to resolve a mac bug.
-from tkmacosx import Button
 import settings
 
 # Instantiate the main window, this is BY CONVENTION, called "root".
@@ -29,8 +28,21 @@ root.resizable(False, False)
 ### This will affect how ".place" and ".grid" function.
 
 ###############################################################################
-# Top-Center (Full Width) Frame Area
+#                    Top-Center (Full Width) Frame Area                       #
+#                 This will be called the: Status Screen                      #
 ###############################################################################
+
+# This frame should have two variations: Startup Screen and Gameplay Screen.
+## Startup Screen: Display Large Text: "Usurper: the Medieval Strategy Game"
+## Gameplay Screen: Display: Usurper Chief Name, Current Game Time, and
+## either "Awaiting Orders", "Waiting on Game Engine", or "Awaiting Response."
+### Awaiting Orders will indicate to player that they can take actions and
+### make adjustments to their gear, etc.
+### Waiting on Game Engine will put the player's ability to interact on hold
+### while the game/narrator makes its/their updates.
+### Awaiting Response will display after the game engine update to let the
+### player know that they can respond to updates such as purchasing goods.
+## Display the currently selected Menu Item.
 
 top_frame = Frame(
     root,
@@ -42,8 +54,56 @@ top_frame = Frame(
 ## in a visibility sense.
 top_frame.place(x = 0, y = 0)
 
+
+########################
+# Status Screen Labels #
+########################
+
+# Within the top_frame, there will need to be a Label to house the two Screens
+startup_screen_label = Label(
+    top_frame,
+    activebackground = "white",
+    activeforeground = "gray",
+    anchor = "center",
+    text="Usurper: the Medieval Strategy Game"
+)
+# Figure out how to Top-Center the label.
+# This label should only be placed/visible if on Startup Screen.
+startup_screen_label.place(x=650, y=0)
+
+usurpation_top_label = Label(
+    top_frame,
+    activebackground = "Blue",
+    activeforeground = "Yellow",
+    anchor = "center",
+    text="Chief Name: [], Week 1, Month 1, Year 1"
+)
+# 
+usurpation_top_label.place(x=640, y=25)
+
+game_status_label = Label(
+    top_frame,
+    activebackground = "White",
+    activeforeground = "Gray",
+    anchor = "center",
+    text="Awaiting Orders"
+)
+game_status_label.place(x = 710, y = 50)
+
+
+############################
+# End Status Screen Labels #
+############################
 ###############################################################################
-# Left-Side, Navigation Bar Frame Area
+#                 End Top-Center (Full Width) Frame Area                      #
+#                 This will be called the: Status Screen                      #
+###############################################################################
+
+
+
+###############################################################################
+#                   Left-Side, Navigation Bar Frame Area                      #
+#                   This will be called the: Navigation Bar                   #
 ###############################################################################
 nav_frame = Frame(
     root,
@@ -54,8 +114,38 @@ nav_frame = Frame(
 # Place the Frame.
 nav_frame.place(x = 0, y = settings.height_prct(15))
 
+#########################
+# Navigation Bar Labels #
+#########################
+
+#############################
+# End Navigation Bar Labels #
+#############################
+
+#######################
+# Navigation Bar Menu #
+#######################
+
+###########################
+# End Navigation Bar Menu #
+###########################
+
+##########################
+# Navigation Bar Buttons #
+##########################
+
+##############################
+# End Navigation Bar Buttons #
+##############################
+
 ###############################################################################
-# Mid, Wide-Area, Proportionate Scaling "Main View" Frame Area
+#                   End Left-Side, Navigation Bar Frame Area                  #
+#                   This will be called the: Navigation Bar                   #
+###############################################################################
+
+###############################################################################
+#         Mid, Wide-Area, Proportionate Scaling "Main View" Frame Area        #
+#                   This will be called the: Main View                        #
 ###############################################################################
 main_frame = Frame(
     root,
@@ -65,6 +155,11 @@ main_frame = Frame(
 )
 # Place the Frame.
 main_frame.place(x = settings.width_prct(20), y = settings.height_prct(15))
+
+###############################################################################
+#         Mid, Wide-Area, Proportionate Scaling "Main View" Frame Area        #
+#                   This will be called the: Main View                        #
+###############################################################################
 
 
 # Yeah, I don't know what this ACTUALLY does.
