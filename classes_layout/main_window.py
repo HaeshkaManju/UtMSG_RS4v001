@@ -118,6 +118,13 @@ nav_frame.place(x = 0, y = settings.height_prct(15))
 # Navigation Bar Labels #
 #########################
 
+navigation_bar_label = Label(
+    nav_frame,
+    activebackground = "Gray",
+    activeforeground = "Black",
+    text = "Menu"
+)
+navigation_bar_label.grid(column = 0, row = 0)
 #############################
 # End Navigation Bar Labels #
 #############################
@@ -125,6 +132,15 @@ nav_frame.place(x = 0, y = settings.height_prct(15))
 #######################
 # Navigation Bar Menu #
 #######################
+
+# The word "Menu" may not be necessary at all.
+
+# The Menu should have all of the buttons LEFT justified.
+# When a button is selected the following should occur:
+## 1) Update that button to be PRESSED.
+## 2) Update the Top_Frame, to contain the name of the Selected Menu Item,
+### or "Usurper: the Medieval Strategy Game" as appropriate.
+## 3) Update the Center View to host the information pertinent to that menu.
 
 ###########################
 # End Navigation Bar Menu #
@@ -134,6 +150,41 @@ nav_frame.place(x = 0, y = settings.height_prct(15))
 # Navigation Bar Buttons #
 ##########################
 
+home_button = Button(
+    nav_frame,
+    text = "Main Menu"
+)
+home_button.grid(column = 1, row = 1)
+
+usurpation_button = Button(
+    nav_frame,
+    text = "My Usurpation"
+)
+usurpation_button.grid(column = 1, row = 2)
+
+lair_button = Button(
+    nav_frame,
+    text = "My Lair"
+)
+lair_button.grid(column = 1, row = 3)
+
+orders_button = Button(
+    nav_frame,
+    text = "Orders"
+)
+orders_button.grid(column = 1, row = 4)
+
+map_button = Button(
+    nav_frame,
+    text = "Map"
+)
+map_button.grid(column = 1, row = 5)
+
+review_turn_results_button = Button(
+    nav_frame,
+    text = "Review Results"
+)
+review_turn_results_button.grid(column = 1, row = 6)
 ##############################
 # End Navigation Bar Buttons #
 ##############################
